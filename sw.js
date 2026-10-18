@@ -1,6 +1,6 @@
 /* Сервис-воркер киоска «Саноати ангишти Тоҷикистон» (автор: Сайдалиев Алиакбар).
-   Сначала сеть, при отсутствии интернета — сохранённая копия. Build ID: SA-CL-2026-047136-D1515B */
-const CACHE = 'angisht-SA-CL-2026-047136-D1515B';
+   Сначала сеть, при отсутствии интернета — сохранённая копия. Build ID: SA-CL-2026-C2D389-6A0E05 */
+const CACHE = 'angisht-SA-CL-2026-C2D389-6A0E05';
 const CORE = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png'];
 self.addEventListener('install', e => { self.skipWaiting(); e.waitUntil(caches.open(CACHE).then(c => c.addAll(CORE)).catch(() => {})); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
